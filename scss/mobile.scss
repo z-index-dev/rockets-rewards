@@ -1,0 +1,69 @@
+@media screen and (max-width:639px) {
+	.rewards-wrapper h3 {
+		padding:16px;
+		font-size:14px;
+	}
+
+  .rewards-wrapper .rewards-info .info-panel-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .rewards-wrapper .rewards-info .info-panel-wrapper li span.title {
+    font-size: 16px;
+  }
+
+  .rewards-wrapper .rewards-info .info-panel-wrapper li span.def {
+    font-size: 16px;
+    word-wrap: break-word;
+  }
+
+  .rewards-wrapper .rewards-info li {
+    font-size: 14px;
+  }
+
+	.rewards-wrapper .chip {
+		width:90%;
+	}
+
+	#rewards-form {
+		width:100%;
+		margin:0 0 50px 0;
+		top:0;
+		position:static;
+    padding: 0;
+	}
+
+  #rewards-form table {
+    grid-template-columns: repeat(6, 1fr);
+    width: fit-content;
+  }
+
+  #rewards-form th {
+    font-size: 14px;
+    word-wrap: normal;
+  }
+
+  #rewards-form td {
+    font-size: 14px;
+  }
+
+  .reward-item input {
+    font-size: 14px;
+  }
+
+  #rewards-form .total {
+    padding-right: 12px;
+  }
+
+  #rewards-form table > * {
+		font-size: 36px;
+	}
+
+  #rewards-form .balance-wrapper {
+    font-size: 24px;
+  }
+
+  #rewards-form .error-msg h3 {
+    font-size: 20px;
+  }
+}

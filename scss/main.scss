@@ -1,0 +1,693 @@
+@import 'partials';
+
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	line-height:normal;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+}
+
+#attentive_overlay {
+	display: none;
+}
+
+.rewards-wrapper {
+	background-color:$offWhite;
+}
+
+.rewards-wrapper div.app-bar {
+	width:100%;
+	padding:0;
+	// @include horizGradient(darken($slate,10%),$slate);
+	// box-shadow:0 3px 3px rgba(0,0,0,0.3);
+	position:relative;
+	z-index:3;
+	overflow:hidden;
+}
+
+.rewards-wrapper div.app-bar img {
+    width:100%;
+    height:auto;
+    display:block;
+    overflow:hidden;
+}
+
+.rewards-wrapper .chip {
+	margin:50px auto;
+	background-color:#FFF;
+	border-bottom:solid 2px darken(#FFF,15%);
+	border-radius:2px;
+	box-shadow:0 6px 6px rgba(0,0,0,0.4);
+	overflow:hidden;
+}
+
+.rewards-wrapper .chip h2 {
+	margin:0;
+	padding:16px;
+	color:$primary;
+	font-family:$roboto;
+	font-weight:300;
+	line-height:1.6;
+}
+
+.rewards-wrapper .chip .links {
+	width:100%;
+	overflow:hidden;
+}
+
+.rewards-wrapper .chip .links a {
+	padding:16px;
+	color:#17a2e2;
+	font-family:$roboto;
+	font-weight:400;
+	font-size:16px;
+	text-decoration:none;
+	display:block;
+	float:right;
+	overflow:hidden;
+}
+
+.rewards-wrapper div.btn-wrapper {
+	width:100%;
+	padding:16px;
+	text-align:center;
+	overflow:hidden;
+	display:block;
+}
+
+.rewards-wrapper .message div.btn-wrapper {
+	text-align:right;
+}
+
+.rewards-wrapper div.btn-wrapper a.btn {
+	padding:11px 16px;
+	border-radius:2px;
+	text-align:center;
+	text-transform:uppercase;
+	display:inline-block;
+	overflow:hidden;
+	@include transition(all 250ms ease-out);
+}
+
+.rewards-wrapper div.btn-wrapper a.primary {
+	background-color:lighten($primary,7%);
+	color:#FFF;
+}
+
+.rewards-wrapper div.btn-wrapper a.primary:hover {
+	background-color:$primary;
+}
+
+.rewards-wrapper div.btn-wrapper a.generic {
+	background-color:#FFF;
+	box-shadow:0 3px 6px rgba(0,0,0,0.1);
+	color:$twitter;
+}
+
+.rewards-wrapper div.btn-wrapper a.disabled {
+	opacity:0.7;
+}
+
+.rewards-wrapper .rewards-info {
+	width:100%;
+	margin:0;
+	background-color:$slate;
+	display:block;
+	overflow:hidden;
+}
+
+.rewards-wrapper h2.section-heading {
+	width:100%;
+	margin:0 auto;
+	padding:16px;
+	color:lighten($slate,12%);
+	font-family:$stratumMedium;
+	font-weight:700;
+	font-size:40px;
+	text-transform:uppercase;
+}
+
+.rewards-wrapper h2.section-heading:after {
+	width:60px;
+	height:3px;
+	margin:4px auto;
+	background-color:$primary;
+	content:"";
+	display:block;
+	overflow:hidden;
+}
+
+.rewards-wrapper .rewards-info {
+	color:darken(#FFF,12%);
+	// font-family:$robotoMedium; 
+	font-family:$roboto;
+	font-weight:400;
+	list-style:none;
+}
+// TODO - Probably need to break these into two separate boxes/grids
+.rewards-wrapper .info-panel-wrapper {
+	width:80%;
+	margin: 0 auto;
+	display:grid;
+	grid-template-columns: repeat(2, minmax(350px, 1fr));
+	grid-gap: 24px;
+	align-items: start;
+	overflow:hidden;
+}
+
+.rewards-wrapper .rewards-info .info-panel, .rewards-wrapper .rewards-info .rewards-tally {
+	background-color: #2b3036;
+	background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+	border:solid 1px darken($slate,10%);
+	border-radius:16px;
+	margin: 0;
+	padding: 4px 16px;
+}
+
+.rewards-wrapper .rewards-info li {
+	width:100%;
+	margin:0;
+	padding: 8px;
+	overflow:hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// .rewards-wrapper .rewards-info .rewards-summary li {
+// 	border-bottom:solid 1px lighten($slate,10%);	
+// }
+
+.rewards-wrapper .rewards-info li span.title {
+	font-size: 18px;
+	color:$secondary;
+	margin-bottom: 4px;
+}
+
+.rewards-wrapper .rewards-info li span.def {
+	text-align: right;
+}
+
+.rewards-wrapper .rewards-info li.bonus, .rewards-wrapper .rewards-info li.total {
+	border-top:solid 1px lighten($slate,10%);
+}
+
+//points
+.rewards-wrapper .rewards-summary li.points > span {
+	font-weight:700;
+}
+
+.rewards-wrapper .rewards-info .rewards-summary li span.title {
+	color:darken($secondary,15%);
+}
+
+.rewards-wrapper h2, .rewards-wrapper h3 {
+	width:80%;
+	margin:16px auto 8px auto;
+	// color:#FFF;
+	font-family:$stratumLight;
+	font-weight:300;
+}
+
+.rewards-wrapper h2 {
+	color:$primary;
+	font-size:40px;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+.rewards-wrapper .rewards-info h3 {
+	// width:100%;
+	margin:16px auto 36px auto;
+	color:$secondary;
+	// font-family:$roboto;
+	// font-weight:300;
+	line-height:1.8;
+	overflow:hidden;
+}
+
+.rewards-wrapper h3 strong {
+	font-weight:700;
+}
+
+.rewards-wrapper h2.info-heading {
+	width: 100%;
+	border-top:solid 1px darken($slate,10%);
+	padding-top: 24px;
+}
+
+.info-panel-wrapper h2.section-heading {
+	color:$secondary
+}
+
+/*--START GENERIC FORM STYLING--*/
+
+.rewards-wrapper form > .btn {
+	margin: 32px auto 16px;
+	padding:12px 16px;
+	border:0;
+	border-radius:2px;
+	font-size:14px;
+	display:inline-block;
+	overflow:hidden;
+	cursor: pointer;
+	@include transition(all 250ms ease-out);
+}
+
+.rewards-wrapper form > .btn:hover {
+	box-shadow:0 2px 6px rgba(0,0,0,0.3);
+}
+
+.rewards-wrapper form > .btn.disabled {
+	opacity:0.5;
+	pointer-events: none;
+}
+
+.rewards-wrapper input[type="submit"] {
+	background-color:transparent;
+	border:solid 2px lighten($primary,5%);
+	border-radius:22px;
+	box-shadow:0;
+	color:lighten($primary,5%);
+	font-size:16px;
+	line-height:1;
+	text-transform:uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rewards-wrapper input[type="submit"]:hover {
+	background-color:lighten($primary,5%);
+	color:#FFF;
+}
+
+.rewards-wrapper input[type="submit"]:focus {
+	outline: 2px dashed $slate;
+}
+
+.rewards-wrapper input[type="submit"]:focus-visible {
+	outline: 4px dashed $slate;
+}
+
+.rewards-wrapper input[type="submit"]:focus:not(:focus-visible) {
+	outline: none;
+	box-shadow: 1px 1px 5px rgba(0,0,0, .7);
+}
+
+/*--END GENERIC FORM STYLING--*/
+
+#rewards-form {
+	margin:0 auto 0 auto;
+	padding:20px;
+	background-color:#FFF;
+	// background-color:lighten($secondary,13%);
+	border-bottom:solid 2px darken(#FFF,15%);
+	border-radius:2px;
+	font-family:$roboto;
+	font-weight:400;
+	box-shadow:0px 6px 6px rgba(0,0,0,0.3);
+	position:relative;
+	top:-50px;
+	z-index:3;
+	overflow:hidden;
+	-webkit-transition:height 300ms ease-out;
+	-moz-transition:height 300ms ease-out;
+	-o-transition:height 300ms ease-out;
+	-moz-transition:height 300ms ease-out;
+	transition:height 300ms ease-out;
+}
+
+#rewards-form table:before, #rewards-form table:after {
+	display: none;
+}
+
+// For reference when doing media queries - https://adamlynch.com/flexible-data-tables-with-css-grid/
+#rewards-form table {
+	position: relative;
+	display: grid;
+	border-collapse: collapse;
+	border: 2px solid $primary;
+	min-width: 100%;
+	grid-template-columns: 3fr 1fr 1fr 1fr 1fr 2fr;
+	place-content: center;
+  place-items: center;
+  text-align: center;
+	border-radius: 16px;
+	background-color: lighten($primary, 5%);
+	color: #fff;
+}
+
+#rewards-form th {
+	font-size: 20px;
+	padding: 16px 0;
+	text-align: center;
+}
+
+#rewards-form thead,
+tbody,
+tr {
+  display: contents;
+}
+
+#rewards-form td:before, #rewards-form td:after {
+	display: none;
+}
+
+#rewards-form td {
+	padding: 8px;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-content: center;
+}
+
+.reward-item input {
+	width:100%;
+	padding:8px;
+	background-color:darken(#FFF,12%);
+	border:0;
+	font-size:14px;
+	vertical-align:top;
+	color: #000;
+}
+
+.reward-item input::placeholder {
+	color: #000;
+}
+
+tr:nth-child(odd) td {
+	background: rgba(0,0,0,.1);
+}
+
+tr:nth-child(even) td {
+	background: rgba(0,0,0,0.3);
+}
+
+// In case you don't make the total the footer of the table
+tr:last-child td:first-child {
+	border-radius: 0 0 0 16px;
+}
+
+tr:last-child td:last-child {
+	border-radius: 0 0 16px 0;
+}
+
+#rewards-form .rewards-inner .reward-item, #rewards-form .rewards-inner .reward-item-legend {
+	width:100%;
+	overflow:hidden;
+}
+
+.reward-item input.input-error {
+	background-color:#ffc0c0;
+}
+
+#rewards-form .balance-wrapper {
+	width:100%;
+	margin:24px 0 0 0;
+	background-color:darken(#FFF,5%);
+	border:solid 1px darken(#FFF,10%);
+	font-size:18px; 
+	overflow:hidden;
+	@include transition(all 300ms ease-out);
+}
+
+#rewards-form .balance-wrapper.negative {
+	margin:12px 0 0 0;
+	background-color:#ffc0c0;
+	border-color:darken(#ffc0c0,10%);
+}
+
+#rewards-form .balance-wrapper span {
+	padding:16px;
+	float:left;
+}
+
+#rewards-form .balance-wrapper span.balance {
+	float:right;
+}
+
+#rewards-form .balance-wrapper.negative span.balance {
+	background-color:darken(#ffc0c0,7%);
+	color:darken(#ffc0c0,40%);
+}
+
+#rewards-form .error-msg {
+	width:100%;
+	margin:20px 0;
+	padding:10px 0 0 0;
+	position:relative;
+	overflow:hidden;
+	will-change: transform;
+	transition: all .5s ease-in-out;
+}
+
+// #rewards-form .error-msg:after {
+// 	width:20px;
+// 	height:10px;
+// 	// background-image:url('../_images/error_arrow_up.png');
+// 	background-repeat:no-repeat;
+// 	position:absolute;
+// 	top:0;
+// 	left:50px;
+// 	content:"";
+// 	display:block;
+// 	overflow:hidden;
+// }
+
+#rewards-form .error-msg.hidden {
+	display:none;
+	will-change: transform;
+	transition: all .5s ease-in-out;
+}
+
+#rewards-form .error-msg h3 {
+	padding:16px;
+	background-color:$primary;
+	color:#FFF;
+	font-size:18px;
+	will-change: transform;
+	transition: all .5s ease-in-out;
+}
+
+.rewards-wrapper .reward-details {
+	width:100%;
+	margin:20px 0;
+	padding:0;
+	list-style:none;
+	overflow:hidden;
+}
+
+.rewards-wrapper .reward-details li {
+	width:100%;
+	background-color:#FFF;
+	border-bottom:solid 1px $divider-light;
+	display:block;
+	overflow:hidden;
+}
+
+.rewards-wrapper .reward-details li h3, .rewards-wrapper .reward-details li p {
+	width:100%;
+	margin:0;
+	padding:8px 12px;
+	font-family:$robotoSlab;
+}
+
+.rewards-wrapper .reward-details li h3 {
+	color:$primary;
+	font-family:$stratumMedium;
+	line-height:1.4;
+}
+
+.rewards-wrapper .reward-details li p {
+	font-size:15px;
+}
+
+.rewards-wrapper p.disclaimer {
+	width:100%;
+	max-width:800px;
+	margin:24px auto;
+	padding:15px;
+	font-family:$robotoSlab;
+	font-size:16px;
+	line-height:1.6;
+}
+
+/*-- START MESSAGE STYLING --*/
+.rewards-wrapper .message, .rewards-wrapper .static-message {
+	max-width:700px;
+	margin:24px auto;
+	padding:16px;
+	background-color:#FFF;
+	border:solid 1px darken($offWhite,12%);
+	border-radius:2px;
+	box-shadow:0 3px 10px rgba(0,0,0,0.1);
+	overflow:hidden;
+	display:block;
+}
+
+.rewards-wrapper .static-message {
+	border:0;
+	border-radius:2px;
+	box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.rewards-wrapper .message.success h3 {
+	color:$slate;
+}
+
+.rewards-wrapper .message:before, .rewards-wrapper .static-message:before {
+	width:12%;
+	margin:0;
+	padding:12% 0 0 0;
+	background-image:url('http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/rockets/1516_renewals/opt-out/_images/question_icon.svg');
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	position:relative;
+	content:"";
+	display:inline-block;
+	vertical-align:middle;
+	overflow:hidden;
+}
+
+.rewards-wrapper .message.question:before, .rewards-wrapper .static-message.question:before {
+	background-image:url('http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/rockets/1516_renewals/opt-out/_images/question_icon.svg');
+}
+
+.rewards-wrapper .message.error, .rewards-wrapper .static-message.error {
+	background-image:none !important;
+}
+
+.rewards-wrapper .message.error:before, .rewards-wrapper .static-message.error:before {
+	background-image:url('http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/rockets/1516_renewals/opt-out/_images/error_icon.svg');
+}
+
+.rewards-wrapper .message.success:before, .rewards-wrapper .static-message.success:before {
+	background-image:url('http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/rockets/1516_renewals/opt-out/_images/success_icon.svg');
+}
+
+.rewards-wrapper .static-message.error:before {
+	opacity:0.4;
+}
+/*-- END MESSAGE STYLING --*/
+
+.premium-asterisk {
+	display:none;
+}
+
+body.premium span.premium-asterisk {
+	display:inline-block !important;
+}
+
+body.premium small.premium-asterisk {
+	display:block !important;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	z-index: 10;
+}
+
+.modal.show-modal {
+  display: block;
+}
+
+#success, #error {
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #dd2b35;
+  padding: 8px 32px;
+  color: #fff;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 800px;
+  animation-name: modalopen;
+  animation-duration: .6s;
+}
+
+#error {
+	font-style: italic;
+}
+
+.modal h3 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.25;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width:991px) {
+	.rewards-wrapper .rewards-info {
+		padding-bottom:70px;
+	}
+
+	.rewards-wrapper h3 {
+		// padding:20px 10%;
+		font-size:18px;
+	}
+
+	.rewards-wrapper .rewards-info .rewards-summary {
+		width:30%;
+		padding:0;
+		// background-color:darken($slate,3%);
+		border:solid 1px $secondary;
+		border-left:0;
+		border-radius:0 2px 2px 0;
+		float:left;
+	}
+
+	.rewards-wrapper .rewards-info .rewards-summary li:last-child {
+		border-bottom:0;
+	}
+
+	#rewards-form {
+		width:900px;
+	}
+
+	.rewards-wrapper .reward-details, .rewards-wrapper p.disclaimer {
+		margin:20px auto;
+	}
+
+	.rewards-wrapper p.disclaimer {
+		width:80%;
+		margin:20px auto;
+	}
+
+	.rewards-wrapper .reward-details {
+		max-width:800px;
+	}
+
+	.rewards-wrapper .chip {
+		width:700px;
+	}
+}
+
+@import 'tablet';
+@import 'mobile';
+@import 'fonts';

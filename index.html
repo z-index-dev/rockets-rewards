@@ -1,0 +1,318 @@
+<html>
+	<head>
+		<title>2020-21 Rockets Rewards</title>
+		<!-- I've provided the global css file on rockets.com because some styles will leak into this document. It's liable to change remotely. This copy is as of 10/24/2018 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/global.css">
+		<!-- hosted jquery inclusion -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+		<!-- link below to local css and js -->
+		<link rel="stylesheet" type="text/css" href="/main.css">
+		<script type="text/javascript" src="/main.js"></script>
+	</head>
+	<body>
+		<div class="nba-wrapper">
+			
+			<!--CONTENT-->
+      <div class="rewards-wrapper">
+        <!-- <div class="app-bar">
+          <img class="logo" src="https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/rockets/201920-renewal-rewards-hero_1.jpg" alt="Forever Red" />				
+        </div> -->
+  
+        <div class="rewards-info">
+          <h2>2021-22 Rockets Rewards</h2>
+  
+          <h3 class="variable-content premium regular">Spend your Rockets Rewards points on any combination of the listed items. Points do not carry over each season, so the final sum should equal the Total Points in the Account Details below. Rewards points can only be applied to items during the 2021-22 season. Accounts must be paid in full by August 29th to be eligible for Rockets Rewards. The deadline to submit your Rockets Rewards preferences is August 31, 2021.</h3>
+    
+			    <h2 class="info-heading">Account Details</h2>
+          <div class="info-panel-wrapper">
+
+          </div>
+        </div>
+  
+        <form id="rewards-form" name="sample-form" method="POST" action="">
+          <h2 class="section-heading">Rewards Summary</h2>
+          <input id="rewards-accountNum" name="accountNumber" type="hidden" value="" />
+          <input id="rewards-uuid" name="uuid" type="hidden" value="" />
+          <input id="rewards-companyName" name="companyName" type="hidden" value="" />
+          <input id="rewards-firstName" name="firstName" type="hidden" value="" />
+          <input id="rewards-lastName" name="lastName" type="hidden" value="" />
+          <input id="rewards-rep" name="csr" type="hidden" value="" />
+          <input id="rewards-totalPoints" name="totalPoints" type="hidden" value=""/>
+  
+          <table class="rewards-inner">
+            <thead class="reward-item-legend">
+              <tr>
+                <th class="title">Rewards Item</th>
+                <th class="value">Points</th>
+                <th class="multiplier" style="opacity: 0;">Multipler</th>
+                <th class="quantity">Quantity</th>
+                <th class="equals" style="opacity: 0;">Equals</th>
+                <th class="total">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="reward-item variable-content regular premium">
+                <td class="title">Complimentary Seats <br><small>(500 points/seat)</small></td>
+                <td class="value" data-value="500">500</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_01" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular">
+                <td class="title">Seat Upgrade for a Game</td>
+                <td class="value" data-value="5000">5,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_17" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular premium">
+                <td class="title">Guaranteed Bobblehead</td>
+                <td class="value" data-value="5000">5,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_02" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular premium">
+                <td class="title">$50 Landry's Gift Card</td>
+                <td class="value" data-value="6000">6,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_03" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular premium">
+                <td class="title">Virtual Chalk Talk with GM Rafael Stone</td>
+                <td class="value" data-value="7000">7,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_04" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular premium">
+                <td class="title">$75 Rockets Shop Gift Card</td>
+                <td class="value" data-value="8000">8,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_05" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular premium">
+                <td class="title">$100 Concessions Credit</td>
+                <td class="value" data-value="10000">10,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_06" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content premium">
+                <td class="title">$100 Kroger Gift Card</td>
+                <td class="value" data-value="10000">10,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_07" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular premium">
+                <td class="title">Dinner in the Red &amp; White Wine Bistro</td>
+                <td class="value" data-value="11000">11,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_08" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular">
+                <td class="title">Tundra Garage Parking<br><small>(One Pass to Levels 4-7)</small></td>
+                <td class="value" data-value="12000">12,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_09" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular">
+                <td class="title">Rockets East &amp; West Club Passes <small>(11 Games)</small></td>
+                <td class="value" data-value="12000">12,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_10" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content premium">
+                <td class="title">Four (4) Club Seats for a Game</td>
+                <td class="value" data-value="13000">13,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_11" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content premium">
+                <td class="title">Upgraded Tundra Garage Parking</td>
+                <td class="value" data-value="14000">14,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_12" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content regular">
+                <td class="title">Christian Wood Autographed Basketball</td>
+                <td class="value" data-value="15000">15,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_13" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content premium">
+                <td class="title">Toyota Center Suite Experience for 12</td>
+                <td class="value" data-value="16000">16,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_14" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr class="reward-item variable-content premium">
+                <td class="title">Rockets Team Autographed Basketball</td>
+                <td class="value" data-value="17000">17,000</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_15" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+
+              <tr id="donate-points" class="reward-item variable-content regular premium">
+                <td class="title">Donate My Points to Clutch City Foundation<br><small>(Underserved Houston youth will receive tickets to a 2021-22 Rockets Game)</small></td>
+                <td class="value" data-value="0">0</td>
+                <td class="multiplier">X</td>
+                <td>
+                  <input type="number" class="product-qt required" name="product_16" min="0" placeholder="0">
+                </td>
+                <td class="equals">=</td>
+                <td class="total" data-value="0"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="balance-wrapper">
+            <span>Rewards Balance: </span>
+            <span class="balance"></span>
+          </div>
+
+          <div class="error-msg hidden"></div>
+  
+          <input id="rewards-submit" class="btn" type="submit" value="Submit Rewards" />
+        </form>
+        
+        <h2 class="section-heading">Rewards Details</h2>
+  
+        <ul class="reward-details">
+          <!-- <li class="variable-content premium">
+            <h3>Suite Experience for 12 &amp; Heineken Star Club Experience Experience for 6</h3>
+            <p>Host a Toyota Center suite, perfect for special occasions (select games).</p>
+          </li> -->
+
+          <li class="variable-content regular premium">
+            <h3>Guaranteed Bobblehead</h3>
+            <p>Receive each Bobblehead offered at the conclusion of the 2021-22 season.</p>
+          </li>
+
+          <li class="variable-content regular premium">
+            <h3>Virtual Chalk Talk with GM Rafael Stone</h3>
+            <p>An exclusive discussion and Q&amp;A about this year's team and all things Rockets.</p>
+          </li>
+
+          <li class="variable-content regular">
+            <h3>Rockets East &amp; West Club Passes &mdash; 11 Games</h3>
+            <p>Enjoy pre-game and halftime in our club lounge, with premium concessions and a full-service bar.</p>
+          </li>
+
+          <li class="variable-content premium">
+            <h3>Four (4) Club Seats for a Game</h3>
+            <p>Bring family or clients out to enjoy a game from the best seats.</p>
+          </li>
+
+          <li class="variable-content premium">
+            <h3>Toyota Center Experience for 12</h3>
+            <p>Host a Toyota Center suite &mdash; perfect for special occasions (select games).</p>
+          </li>
+
+          <li class="variable-content regular">
+            <h3>Tundra Garage Parking</h3>
+            <p>Get in your seat faster with a pass to the Tundra Garage and Skybridge access to Toyota Center for every game.</p>
+          </li>
+        </ul>
+        
+        <!-- <p class="variable-content disclaimer quarter">Eligible games for Seat Upgrades will be made available through the Rockets app under Membership Rewards. Eligible date(s) will be provided for Complimentary Upper Level Seats. <i>All Rewards are based on availability and subject to change</i>.</p> -->
+  
+        <!--HALFS AND Regulars-->
+        <!-- <p class="variable-content disclaimer full">Eligible games for Seat Upgrades will be made available through the Rockets app under Membership Rewards. Eligible date(s) will be provided for the All-Access Autograph/Photograph Pass and Complimentary Upper Level Seats. <i>All Rewards are based on availability and subject to change</i>.</p>
+  
+        <p class="variable-content disclaimer half">Eligible games for Seat Upgrades will be made available through the Rockets app under Membership Rewards. Eligible date(s) will be provided for Complimentary Upper Level Seats. <i>All Rewards are based on availability and subject to change</i>.</p> -->
+  
+        <!--PREMIUM-->
+        <p class="variable-content disclaimer premium">Eligible date(s) will be provided for Complimentary Seats and Toyota Center Suite Experience.<i>All Rewards are based on availability and subject to change</i>.</p>
+
+        <p class="variable-content disclaimer regular">Eligible date(s) will be provided for Complimentary Seats & Rockets East & West Club Passes.<i>All Rewards are based on availability and subject to change</i>.</p>
+      </div>
+      <div class="modal" id="modal">
+        <!-- <div id="success">
+          <h3>Thank you for your 2020-21 Rockets Rewards Request! Etc.</h3>
+          <h3>Go Rockets!</h3>
+        </div>
+        <div id="error">
+          
+        </div> -->
+      </div>
+			<!--END CONTENT-->
+		</div>
+	</body>
+</html>

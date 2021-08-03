@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+//--START COLOR PALETTE--
+$primary:#CD212B;
+$secondary:#C4CED3;
+$tertiary:#222;
+$mustard:#ffc211;
+$slate:#2b3036;
+$accent: #607D8B;
+$offWhite:#EEEEEE;
+//--END COLOR PALETTE--
+
+//MATERIAL PALETTE
+$primary-light:#FFCDD2;
+$primary-text: #212121;
+$secondary-text:#727272;
+$divider:#B6B6B6;
+$divider-light:lighten(#B6B6B6,20%);
+$legendGold:#ab7a62;
+$legendDark:#12182f;
+
+//--START SOCIAL COLORS--
+$twitter:#0099EB;
+$facebook:#3a5b9b;
+$googleplus:#dc4b3e;
+$instagram:#3f729b;
+$calendar:#1FBBE5;
+$calendarDark:#259BC2;
+//--END SOCIAL COLORS--
+
+
+$sansSerif:"Helvetica Neue",Helvetica,Arial,sans-serif;
+$serif:"Vitesse",Rockwell,serif;
+
+$roboto:'Roboto',$sansSerif;
+$robotoSlab:'Roboto Slab',$serif;
+
+// $stratumBlack:"sw9",$roboto;
+// $stratumBold:"sw7",$roboto;
+$stratumMedium:"sw4",$roboto;
+// $stratumRegular:"sw3",$roboto;
+$stratumLight:"sw2",$roboto;
+// $stratumThin:"sw1",$roboto;
+
+//--START MIXINS--
+
+@mixin vertGradient($colorStart,$colorEnd){
+	background-color: $colorStart;
+	background: -moz-linear-gradient(top,$colorStart 10%,$colorEnd 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(10%,$colorStart),color-stop(100%,$colorEnd));
+	background: -webkit-linear-gradient(top,$colorStart 10%,$colorEnd 100%);
+	background: -o-linear-gradient(top,$colorStart 10%,$colorEnd 100%);
+	background: -ms-linear-gradient(top,$colorStart 10%,$colorEnd 100%);
+	background: linear-gradient(to bottom,$colorStart 10%,$colorEnd 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$colorStart,endColorstr=$colorEnd,GradientType=0);
+}
+
+@mixin horizGradient($colorStart,$colorEnd){
+	background-color: $colorStart;
+	background-image: -webkit-gradient(linear, left top, right top, from($colorStart), to($colorEnd));
+	background-image: -webkit-linear-gradient(left, $colorStart, $colorEnd);
+	background-image: -moz-linear-gradient(left, $colorStart, $colorEnd);
+	background-image: -o-linear-gradient(left, $colorStart, $colorEnd);
+	background-image: linear-gradient(to right, $colorStart, $colorEnd);
+}
+
+@mixin angleGradient($angle,$colorStart,$colorEnd){
+	background-color: $colorStart;
+	background-image: -webkit-gradient(linear, $angle, from($colorStart), to($colorEnd));
+	background-image: -webkit-linear-gradient($angle, $colorStart, $colorEnd);
+	background-image: -moz-linear-gradient($angle, $colorStart, $colorEnd);
+	background-image: -o-linear-gradient($angle, $colorStart, $colorEnd);
+	background-image: linear-gradient($angle, $colorStart, $colorEnd);
+}
+
+@mixin transition($properties...){
+	-webkit-transition:$properties;
+	-moz-transition:$properties;
+	-o-transition:$properties;
+	-ms-transition:$properties;
+	transition:$properties;
+}
+
+@mixin transform($properties...){
+	-webkit-transform:$properties;
+	-moz-transform:$properties;
+	-o-transform:$properties;
+	-ms-transform:$properties;
+	transform:$properties;
+}
+
+@mixin filter($properties...){
+	-webkit-filter:$properties;
+	-moz-filter:$properties;
+	-o-filter:$properties;
+	-ms-filter:$properties;
+	filter:$properties;
+}
+
+//--END MIXINS--

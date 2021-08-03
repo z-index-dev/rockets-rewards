@@ -1,0 +1,71 @@
+@media screen and (max-width:990px) {
+	.rewards-wrapper .rewards-info {
+		padding-bottom:70px;
+	}
+
+	.rewards-wrapper h3 {
+		// padding:20px 5%;
+		font-size:18px;
+	}
+
+	.rewards-wrapper .info-panel-wrapper {
+		width: 95%;
+		grid-gap: 12px;
+	}
+	
+	.rewards-wrapper .rewards-info li span.title {
+		font-size: 20px;
+	}
+
+	.rewards-wrapper .rewards-info li span.def {
+		font-size: 18px;
+		max-width: 100px;
+	}
+
+	.rewards-wrapper .chip {
+		width:80%;
+	}
+
+	#rewards-form {
+		width:98%;
+	}
+
+	#rewards-form table {
+		grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	#rewards-form th {
+		font-size: 26px;
+		border-bottom: none;
+	}
+
+	#rewards-form table > * {
+		font-size: 24px;
+	}
+
+	#rewards-form .total {
+		padding-right: 48px;
+	}
+
+	#rewards-form td {
+		padding: 8px 4px 8px 8px;
+		font-size: 24px;
+	}
+
+	.reward-item input {
+		font-size: 20px;
+		margin: 4px;
+	}
+
+	#rewards-form .balance-wrapper {
+		font-size: 30px;
+	}
+
+	#rewards-form .error-msg h3 {
+		font-size: 24px;
+	}
+
+	.rewards-wrapper input[type="submit"] {
+		font-size: 24px;
+	}
+}
