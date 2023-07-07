@@ -1,26 +1,7 @@
 {
-  "dependencies": {
-    "@babel/runtime": "^7.14.0",
-    "autoprefixer": "^9.8.6",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "install": "^0.13.0",
-    "jquery": "^3.6.0",
-    "mongoose": "^5.12.11",
-    "node-sass": "^6.0.0",
-    "nodemon": "^2.0.7",
-    "npm": "^7.15.1",
-    "postcss": "^8.3.0"
-  },
   "name": "rewards-mongo",
   "version": "1.0.0",
   "main": "main.js",
-  "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.14.3",
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.34.0",
-    "shx": "^0.3.3"
-  },
   "scripts": {
     "start": "parcel index.html",
     "prebuild-dev": "shx rm -rf dist/*",
@@ -28,6 +9,17 @@
     "prebuild": "shx rm -rf dist/*",
     "build": "parcel build index.html --no-content-hash --public-url ./",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.0",
+    "jquery": "^3.6.0",
+    "postcss": "^8.3.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.34.0",
+    "shx": "^0.3.3"
   },
   "author": "",
   "license": "ISC",
